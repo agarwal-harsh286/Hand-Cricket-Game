@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Hand Cricket Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="game-container">
+        <div class="score-board">
+            <div class="player1-score">
+                <h2>Player 1</h2>
+                <p>Score: <span id="player1-score">0</span></p>
+            </div>
+            <div class="player2-score">
+                <h2>Player 2</h2>
+                <p>Score: <span id="player2-score">0</span></p>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="player-turn">
+                <h2 id="current-player">Player 1's Turn</h2>
+                <p id="game-status">Choose your number (1-6)</p>
+            </div>
+
+            <div class="number-buttons">
+                <button onclick="selectNumber(1)">1</button>
+                <button onclick="selectNumber(2)">2</button>
+                <button onclick="selectNumber(3)">3</button>
+                <button onclick="selectNumber(4)">4</button>
+                <button onclick="selectNumber(5)">5</button>
+                <button onclick="selectNumber(6)">6</button>
+            </div>
+
+            <div class="game-icons">
+                <div class="bat-icon" id="bat-container"></div>
+                <div class="ball-icon" id="ball-container"></div>
+            </div>
+        </div>
+
+        <button id="play-btn" class="play-button" onclick="playTurn()">Play!</button>
+        <button id="reset-btn" class="reset-button" onclick="resetGame()">Reset Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
